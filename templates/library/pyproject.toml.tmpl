@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools==84.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "__DISTRIBUTION__"
+version = "0.1.0b0"
+description = __DESCRIPTION_JSON__
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+__IMPORT__ = ["py.typed"]

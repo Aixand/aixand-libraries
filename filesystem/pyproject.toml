@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools==84.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aixand-lib-filesystem"
+version = "0.1.0b0"
+description = "Standalone file locks, private permissions, and Windows pinned-path access"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aixand_filesystem = ["py.typed"]

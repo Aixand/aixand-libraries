@@ -1,0 +1,19 @@
+# Maintainer development
+
+Requires Python 3.11+ and uv. Run from the package directory:
+
+```sh
+./dev.sh develop --local
+./dev.sh check
+./dev.sh test
+./dev.sh build
+```
+
+Use `dev.ps1` on Windows. Add behavioral tests before releasing. After changing
+metadata or development dependencies, run `./dev.sh lock --local` and review the
+lock. Without sibling sources, omit `--local` and optionally pass
+`--wheelhouse /path/to/wheels`. Build outputs go to `dist/`.
+
+See the repository [release guide](../../docs/releases.md). Generation does not
+register this package for release. External contributions are not currently accepted;
+see [reporting guidance](../../docs/reporting.md).

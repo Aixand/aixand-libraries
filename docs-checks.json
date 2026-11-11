@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "include": [
+    "README.md",
+    "docs/**/*.md",
+    "*/README.md",
+    "*/docs/*.md",
+    "SECURITY.md",
+    "templates/**/*.md"
+  ],
+  "exclude": [],
+  "allow_placeholders": false
+}

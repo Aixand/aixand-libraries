@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aixand-lib-local-runtime"
+version = "0.1.0b0"
+description = "Local IPC, WebSockets, process identity, and shutdown utilities"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = ["aixand-lib-filesystem>=0.1.0b0,<0.2"]
+
+[project.optional-dependencies]
+websocket = ["websockets>=15,<18"]
+
+[dependency-groups]
+dev = ["ruff==0.15.7"]
+qualification = ["websockets==16.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.uv.sources]
+aixand-lib-filesystem = { path = "../filesystem", editable = true }
